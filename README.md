@@ -1,8 +1,8 @@
 # GaussElimination
 To calculate the determinant of the square matrix using GE method
 
-#include<stdio.h>
-#include<conio.h>
+include<stdio.h>
+include<conio.h>
 int main()
 {
 float a[100][100];
