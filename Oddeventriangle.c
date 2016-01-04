@@ -5,7 +5,7 @@
 #include<conio.h>
 int main()
 {
-    int order,i,j,odd=1,even=2,x=1;
+    int order,i,j,odd=1,even=2;
     scanf("%d",&order);
     for(i=1;i<=order;i=i+2)
     {
@@ -22,7 +22,6 @@ int main()
         }
         printf("\n");
     }
-
     return 0;
 }
 
