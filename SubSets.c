@@ -2,13 +2,10 @@
 to determine the subsets of the given array
 
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int i,j,ans;
-    int a[1000][1000]={0};
-    int c[100];
-    int k=1,y;
-    int n,m;
+    int i,j,ans,a[1000][1000]={0},c[100],k=1,y,n,m,x;
     scanf("%d",&m);
     for(i=1;i<=m;i++)
     {
@@ -16,7 +13,7 @@ int main()
     }
     n=pow(2,m);
     y=n;
-   int x=1;
+    x=1;
     for(j=1;j<=m;j++)
     {
         for(i=1;i<=n;i++)
@@ -38,7 +35,6 @@ int main()
             {
             a[i][j]=1;
             }
-
         }
          y=y/2;
     }
