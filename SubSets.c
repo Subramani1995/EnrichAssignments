@@ -6,7 +6,9 @@ to determine the subsets of the given array
 int main()
 {
     int i,j,ans,a[1000][1000]={0},c[100],k=1,y,n,m,x;
+    printf("Enter the size of array \n");
     scanf("%d",&m);
+    printf("enter elements \n");
     for(i=1;i<=m;i++)
     {
         scanf("%d",&c[i]);
