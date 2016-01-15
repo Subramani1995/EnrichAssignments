@@ -100,6 +100,7 @@ int swap(int *e,int *f)
     temp=*e;
     *e=*f;
     *f=temp;
+    return 0;
 }
 void print(int p[][50])
 {
