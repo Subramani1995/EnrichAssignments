@@ -12,3 +12,4 @@ int main()
     i=(num==0)?1:i;
     printf("No of bits required is: %d",i);
     return 0;
+}
