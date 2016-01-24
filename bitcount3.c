@@ -4,7 +4,7 @@ to perform bitcount without using arithmetic/shift operations
 #include<math.h>
 int main()
 {
-    int num,i,bitcount=1,j=0;
+    int num,i,bitcount=1;
     scanf("%d",&num);
     for(i=0;(pow(2,i))<=num;i++)
     {
