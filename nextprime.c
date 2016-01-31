@@ -36,6 +36,7 @@ int main()
         }
     }
     int check=0,value,l;
+    num++;
     value=(num%2==0)?1:0;
     for(i=num+value;;i=i+2)
     {
