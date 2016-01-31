@@ -1,8 +1,10 @@
-//to find next prime number
-
 #include<stdio.h>
+#include<time.h>
 int main()
 {
+    clock_t start,end;
+    double time_taken;
+    start=clock();
     int num,k=1,prime[1000],i,j,flag=0,count=0;
     prime[0]=2;
     scanf("%d",&num);
@@ -57,6 +59,9 @@ int main()
         }
     }
     }
+    end=clock();
+    time_taken=((double)(end-start))/CLOCKS_PER_SEC;
+    printf("\ntime taken for execution of my code is %f",time_taken);
     printf("\nno of iterations is %d",count);
     return 0;
 }
