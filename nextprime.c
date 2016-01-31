@@ -14,11 +14,10 @@ int main()
     }
     else
     {
-    for(i=3;i<(num);i=i+2)
+    for(i=3;;i=i+2)
     {
         for(j=0;j<k;j++)
         {
-            count++;
             if(i%prime[j]==0)
             {
                 flag=1;
@@ -29,40 +28,20 @@ int main()
                 flag=0;
             }
         }
-        if(flag==0)
+        if((flag==0))
         {
             prime[k]=i;
             k++;
-        }
-    }
-    int check=0,value,l;
-    num++;
-    value=(num%2==0)?1:0;
-    for(i=num+value;;i=i+2)
-    {
-        for(l=0;l<k;l++)
-        {
-            count++;
-            if(i%prime[l]==0)
+            if(i>num)
             {
-                check=1;
+                printf("Next prime number is %d",i);
                 break;
             }
-            else
-            {
-                check=0;
-            }           
-        }
-        if(check==0)
-        {
-            printf("Next prime number is %d",i);
-            break;
         }
     }
-    }
+    }    
     end=clock();
     time_taken=((double)(end-start))/CLOCKS_PER_SEC;
-    printf("\ntime taken for execution of my code is %f",time_taken);
-    printf("\nno of iterations is %d",count);
+    printf("\ntime taken for execution of my code is %f sec",time_taken);
     return 0;
 }
