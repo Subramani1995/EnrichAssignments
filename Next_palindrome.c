@@ -16,6 +16,7 @@ int main()
     else
     {
         n=n1;
+     // to find length of the number
         while(n!=0)
         {
             n=n/10;
@@ -24,12 +25,14 @@ int main()
         int c=count;
         val=count;
         n=n1;
+        // To store the number in array
         for(i=count;i>0;i--)
         {
             b[i]=n%10;
             a[i]=n%10;
             n=n/10;
         }
+        //for test cases 1-9
         if(count==1)
         {
             a[1]=a[1]+1;
@@ -42,6 +45,7 @@ int main()
             }
             for(j=1;j<=count;j++)
             {      
+                //copying the first number=last number unless centre of no is reached
                 if(j<(c/2))
                 {
                     a[val]=a[j];
@@ -49,12 +53,15 @@ int main()
                 }
                 else
                 {
+                    //if the number is odd then middle digit has to increased by 1 depending on the adjacent values
                       if(count%2!=0)
                         {
                              if(b[j-1]<=b[j+1])
                              {
                                 if(a[j]==9)
                                 {
+                                    //if the number is 9 then incrementing it will make it 10, to avoid this again incrementing all
+                                    //numbers except mid one by 1 and make mid num as zero instead of 10
                                     for(k=1;k<j;k++)
                                     { 
                                         a[k]=a[k]+1;
@@ -79,6 +86,8 @@ int main()
                         }
                         else
                         {
+                        // if it is even, middile 2 digits have to be changed 
+                        // again if any one of them is 9, same procedure  is followed
                         if((a[j]==9)&&(j!=1))
                         {
                           for(k=1;k<j;k++)
@@ -100,6 +109,7 @@ int main()
                                 }
                             }
                      }
+                     //logic for conversion of middle two digits. it depends on adjacent values
                     if(b[j]>=b[j+1])
                     {
                         a[j+1]=a[j];
@@ -114,7 +124,7 @@ int main()
             }
         }
     }
-    
+    //converting the array of elements again into a number
     int sum=0,g=count-1;
     for(i=1;i<=count;i++)
         {
