@@ -49,6 +49,9 @@ int main()
         for(j=i+1;j<pass_count;j++)
         {
             //sorting depending on cut_off(first priority),total(2nd priority),lang1 mark(3rd priority)
+            /*using single if statement instead of nest else if
+            because operation of else if can be performed jus by using OR operator- since the condition goes to 2nd step
+            only if the 1st condition fails and so on*/
             if((copy[j].cut_off>copy[i].cut_off)||((copy[j].cut_off==copy[i].cut_off)&&(copy[j].total>copy[i].total))||((copy[j].cut_off==copy[i].cut_off)&&(copy[j].total==copy[i].total)&&(copy[j].lang1>copy[i].lang1)))
             {
                 temp[k]=copy[i];
