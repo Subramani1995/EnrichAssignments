@@ -37,6 +37,13 @@ int main()
     f.year=(((f.given[0])*1000)+((f.given[1])*100)+((f.given[2])*10)+((f.given[3])*1));
     f.month=(((f.given[5])*10)+((f.given[6])));
     f.date=(((f.given[8]*10))+f.given[9]);
+    //date validation
+    if((f.year<0)||(f.month>12)||(f.month<0)||(f.date>31)||(strlen(str)!=11))
+    {
+        printf("Date is not valid");
+    }
+    else
+    {
     int yr_no,month_no,day_no,index,new_date,georgian,in_between;  
     //calling various functions
     yr_no=find_yr(f);
@@ -57,6 +64,7 @@ int main()
     printf("Index of the day is: %d\n",index);
     printf("Day for the given date is: %s\n",day_list[georgian]);
     printf("In between day count is %d\n",in_between);
+    }
     return 0;    
 }
 int find_yr(struct format f)
