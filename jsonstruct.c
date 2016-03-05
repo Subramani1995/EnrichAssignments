@@ -5,7 +5,7 @@ struct contact_persons
     char *first_name;
     char *last_name;
     char *e_mail;    
-}*c_p;
+};
 struct contact
 {
     char *contact_id;
