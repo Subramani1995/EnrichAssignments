@@ -35,8 +35,7 @@ int main() {
         if((start==0)&&(stop==0))
         {
             // if the name has no constraints
-            c++;
-            strcpy(s[i].copy,s[i].name);
+             strcpy(s[i].copy,s[i].name);
         }
         else if(start!=0)
         {
